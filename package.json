@@ -5,6 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "set DEBUG=app & node app.js",
+    "debug": "set DEBUG=* & node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
