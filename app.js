@@ -22,7 +22,7 @@ app.set("view engine", "ejs");
 
 app.get("/", (req,res) =>{
     //res.send('Hello BorntoDev'); //index
-    res.render('index',{username: 'Visarut', customer: [".Net C#", ".Net Core", "NodeJS"]});
+    res.render('index',{username: 'Visarut', customer: [".Net Core", "NodeJS", "Angular"]});
 })
 
 app.listen(PORT, ()=>{
