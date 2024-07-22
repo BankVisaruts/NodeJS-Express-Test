@@ -11,6 +11,8 @@ import {
 import {
     dirname
 } from 'path';
+// const products = require("./data/products.json");
+import products from './data/products.json' assert { type: 'json' };
 const productRouter = express.Router();
 
 const __filename = fileURLToPath(
@@ -28,14 +30,17 @@ app.set("view engine", "ejs");
 
 productRouter.route("/").get((req, res) => {
     // res.send("Hello World !! I'm Product");
-    res.render("products", {
-        products: [
-            {productTitle: 'น้ำยาล้างจาน', productDescription: 'น้ำยาล้างจานสูตร 1 ดีเลิศ', productPrice: 45},
-            {productTitle: 'น้ำยาล้างจาน 2', productDescription: 'น้ำยาล้างจานสูตร 2 ดีเลิศ', productPrice: 65},
-            {productTitle: 'น้ำยาล้างจาน 3', productDescription: 'น้ำยาล้างจานสูตร 3 ดีเลิศ', productPrice: 35},
-            {productTitle: 'น้ำยาล้างจาน 4', productDescription: 'น้ำยาล้างจานสูตร 4 ดีเลิศ', productPrice: 55}
-        ]
-    });
+    res.render("products", 
+        products,
+        //{
+        // products: [
+        //     {productTitle: 'น้ำยาล้างจาน', productDescription: 'น้ำยาล้างจานสูตร 1 ดีเลิศ', productPrice: 45},
+        //     {productTitle: 'น้ำยาล้างจาน 2', productDescription: 'น้ำยาล้างจานสูตร 2 ดีเลิศ', productPrice: 65},
+        //     {productTitle: 'น้ำยาล้างจาน 3', productDescription: 'น้ำยาล้างจานสูตร 3 ดีเลิศ', productPrice: 35},
+        //     {productTitle: 'น้ำยาล้างจาน 4', productDescription: 'น้ำยาล้างจานสูตร 4 ดีเลิศ', productPrice: 55}
+        // ]
+    // }
+    );
 });
 
 productRouter.route("/1").get((req, res) => {
