@@ -5,27 +5,54 @@ import createDebug from 'debug';
 const debug = createDebug('app');
 import morgan from 'morgan';
 import path from 'path';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import {
+    fileURLToPath
+} from 'url';
+import {
+    dirname
+} from 'path';
+const productRouter = express.Router();
 
-const __filename = fileURLToPath(import.meta.url);
+const __filename = fileURLToPath(
+    import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 4000;
 
 app.use(morgan('combined'));
-app.use(express.static(path.join(__dirname,"/public/")));
+app.use(express.static(path.join(__dirname, "/public/")));
 
-app.set("views","./src/views");
+app.set("views", "./src/views");
 app.set("view engine", "ejs");
 
-app.get("/", (req,res) =>{
+productRouter.route("/").get((req, res) => {
+    // res.send("Hello World !! I'm Product");
+    res.render("products", {
+        products: [
+            {productTitle: 'น้ำยาล้างจาน', productDescription: 'น้ำยาล้างจานสูตร 1 ดีเลิศ', productPrice: 45},
+            {productTitle: 'น้ำยาล้างจาน 2', productDescription: 'น้ำยาล้างจานสูตร 2 ดีเลิศ', productPrice: 65},
+            {productTitle: 'น้ำยาล้างจาน 3', productDescription: 'น้ำยาล้างจานสูตร 3 ดีเลิศ', productPrice: 35},
+            {productTitle: 'น้ำยาล้างจาน 4', productDescription: 'น้ำยาล้างจานสูตร 4 ดีเลิศ', productPrice: 55}
+        ]
+    });
+});
+
+productRouter.route("/1").get((req, res) => {
+    res.send("Hello World !! I'm Product 1");
+});
+
+app.use("/products", productRouter);
+
+app.get("/", (req, res) => {
     //res.send('Hello BorntoDev'); //index
-    res.render('index',{username: 'Visarut', customer: ["VB.Net" ,"C#.Net", ".Net Core", "NodeJS", "Angular"]});
+    res.render('index', {
+        username: 'Visarut',
+        customer: ["VB.Net", "C#.Net", ".Net Core", "NodeJS", "Angular"]
+    });
 })
 
-app.listen(PORT, ()=>{
+app.listen(PORT, () => {
     console.log("Listening on port %s", chalk.green(PORT)); //console
     debug("Listening on port" + chalk.green(" : " + PORT)); //debug
 })
