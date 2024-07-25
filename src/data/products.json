@@ -27,5 +27,11 @@
         "productTitle": "น้ำยาล้างจาน 5",
         "productDescription": "น้ำยาล้างจานสูตร 5 ดีเลิศ",
         "productPrice": 555
+    },
+    {
+        "id": 5,
+        "productTitle": "น้ำยาล้างจาน 6",
+        "productDescription": "น้ำยาล้างจานสูตร 6 ดีเลิศสุดๆ",
+        "productPrice": 999
     }
 ]
