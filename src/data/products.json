@@ -1,37 +1,38 @@
-[{
+[
+    {
+        "id": 0,
+        "productTitle": "น้ำยาล้างจานสูตรใหม่",
+        "productDescription": "น้ำยาล้างจานสูตรใหม่ทำความสะอาดล้ำลึก",
+        "productPrice": 50
+    },
+    {
         "id": 1,
-        "productTitle": "น้ำยาล้างจาน",
-        "productDescription": "น้ำยาล้างจานสูตร 1 ดี",
-        "productPrice": 45
+        "productTitle": "น้ำยาล้างจานกลิ่นมะนาว",
+        "productDescription": "น้ำยาล้างจานกลิ่นมะนาว หอมสดชื่น",
+        "productPrice": 70
     },
     {
         "id": 2,
-        "productTitle": "น้ำยาล้างจาน 2",
-        "productDescription": "น้ำยาล้างจานสูตร 2 ดีมาก",
-        "productPrice": 65
+        "productTitle": "น้ำยาล้างจานสูตรธรรมชาติ",
+        "productDescription": "น้ำยาล้างจานสูตรธรรมชาติ ปลอดภัยต่อสิ่งแวดล้อม",
+        "productPrice": 40
     },
     {
         "id": 3,
-        "productTitle": "น้ำยาล้างจาน 3",
-        "productDescription": "น้ำยาล้างจานสูตร 3 ดีสุดยอด",
-        "productPrice": 35
+        "productTitle": "น้ำยาล้างจานสูตรเข้มข้น",
+        "productDescription": "น้ำยาล้างจานสูตรเข้มข้น ล้างคราบมันได้ดี",
+        "productPrice": 60
     },
     {
         "id": 4,
-        "productTitle": "น้ำยาล้างจาน 4",
-        "productDescription": "น้ำยาล้างจานสูตร 4 ดีเลิศ",
-        "productPrice": 55
+        "productTitle": "น้ำยาล้างจานสูตรประหยัด",
+        "productDescription": "น้ำยาล้างจานสูตรประหยัด ใช้น้อยแต่ได้ผลดี",
+        "productPrice": 30
     },
     {
         "id": 5,
-        "productTitle": "น้ำยาล้างจาน 5",
-        "productDescription": "น้ำยาล้างจานสูตร 5 ดีเลิศมาก",
-        "productPrice": 555
-    },
-    {
-        "id": 6,
-        "productTitle": "น้ำยาล้างจาน 6",
-        "productDescription": "น้ำยาล้างจานสูตร 6 ดีเลิศสุดๆ",
-        "productPrice": 999
+        "productTitle": "น้ำยาล้างจานสูตรออร์แกนิค",
+        "productDescription": "น้ำยาล้างจานสูตรออร์แกนิค ปลอดสารเคมี",
+        "productPrice": 120
     }
 ]
